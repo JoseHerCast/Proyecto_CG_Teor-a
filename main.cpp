@@ -1540,9 +1540,10 @@ void display ( void )   // Creamos la funcion donde se dibuja
 				glEnable(GL_LIGHTING);
 			glPopMatrix();
 			
-			//glPushMatrix();
-			//	kiosco();
-			//glPopMatrix();
+			//Renderizado del kiosko
+			glPushMatrix();
+				kiosco();
+			glPopMatrix();
 
 			//Renderizado de personajes
 			glPushMatrix();
@@ -2658,6 +2659,12 @@ void display ( void )   // Creamos la funcion donde se dibuja
 					glEnable(GL_LIGHTING);
 				glPopMatrix();
 	
+			glPopMatrix();
+
+			glPushMatrix();
+			glTranslatef(0.0, 3.0, -10.0);
+			glScalef(3, 3, 3);
+			//Dibuja_torre_2X4(0, _02DiffuseG, _02Specular, _02Shininess);
 			glPopMatrix();
 	glPopMatrix();
 
